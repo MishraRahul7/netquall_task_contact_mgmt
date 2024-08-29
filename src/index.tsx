@@ -4,14 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
-import store from "./store";
+import {createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import store from "./store";
+import Contact from './Pages/Contact';
+import ChartsMaps from './Pages/ChartsMaps';
+import Navbar from './components/Navbar';
+
+const router = createBrowserRouter([
+  {
+      path: '/',
+      element: <Contact />,
+  },
+  {
+      path: '/charts-and-maps',
+      element: <ChartsMaps />,
+  },
+]);
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <Provider store={store}>
-    <App />
+    <RouterProvider router={router}/>
   </Provider>
 );
 
