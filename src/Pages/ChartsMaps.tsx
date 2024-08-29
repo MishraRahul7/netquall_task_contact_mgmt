@@ -5,7 +5,7 @@ import LineChart from '../components/LineChart'
 const ChartsMaps = () => {
   return (
     
-    <div><Navbar/>
+    <div>
     <LineChart/>
     </div>
   )

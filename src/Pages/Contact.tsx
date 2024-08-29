@@ -12,7 +12,6 @@ const Contact = () => {
   return (
     
     <div>
-      <Navbar/>
       {!isCreate?
         <button onClick={handleCreateContact}>Create Contact</button>:
         <></>
